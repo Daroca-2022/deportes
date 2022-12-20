@@ -11,8 +11,8 @@ const eventosSchema=new Schema({
     eve_marca1:{type:Number},
     eve_marca2:{type:Number},
     dep_id:{type: Schema.ObjectId, ref: "Deportes"},
-    eve_descrip:{type:String,Trim:true},
-    usu_id:{type: Schema.ObjectId, ref: "Usuarios"}
+    eve_descrip:{type:String,Trim:true}
+    
 })
 
 module.exports=mongoose.model('eventos',eventosSchema)

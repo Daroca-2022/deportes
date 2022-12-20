@@ -1,5 +1,21 @@
 const usuarios=require('../models/usuarios')
 
+// GET verificacion existencia usuario logeado
+exports.authGet = async (req, res, next) => {
+    try{
+        const user = await usuarios.find({usu_email:req.params.email,usu_clave:req.params.clave} );
+        if(user.length == 0){
+            return res.json({msg:"el usuario no existe"})
+        }
+        return res.json(user);
+    } catch(error){
+        console.log(error);
+        res.send(error);
+        next()  
+    }
+};
+
+
 //primera accion listar todos
 exports.list=async(req,res)=>{
 
@@ -16,7 +32,7 @@ exports.list=async(req,res)=>{
 }
 
 //primera accion ingresar todos
-exports.add=async(req,res)=>{
+exports.add=async(req,res, next)=>{
 const usuario=new usuarios(req.body)
     try{
    

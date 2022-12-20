@@ -6,6 +6,10 @@ const deportesController=require('../controllers/deportesController')
 const eventosController=require('../controllers/eventosController')
 
 module.exports=()=>{
+
+    //llamado get de login
+    router.get('/usuarios/:email/:clave',usuariosController.authGet)
+
     //llamado get de usuarios
     router.get('/usuarios',usuariosController.list)
    
@@ -42,16 +46,20 @@ module.exports=()=>{
     //llamado delete de deportes
     router.delete('/deportes/:id',deportesController.delete)
     
-    //llamado get de marcadores
+    
+    //llamado get de eventos
+    router.get('/eventos/home',eventosController.eventosHome)
+
+    //llamado get de eventos
     router.get('/eventos',eventosController.list)
     
-    //llamado post de deportes
+    //llamado post de eventos
     router.post('/eventos',eventosController.add)
 
-    //llamado put de deportes
+    //llamado put de eventos
     router.put('/eventos/:id',eventosController.update)
 
-    //llamado delete de deportes
+    //llamado delete de eventos
     router.delete('/eventos/:id',eventosController.delete)
 
     return router
