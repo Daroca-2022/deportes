@@ -134,15 +134,15 @@ class PageEventos extends Component {
                     this.modalInsertar()
                     }}>Agregar Evento</button>
                 <br /><br />
-                <table className="table ">
+                <table className="table"  class="table table-striped">
                     <thead>
                         <tr>
                             {/*<th>ID</th>*/}
                             <th>FECHA</th>
                             <th>EQUIPO A</th>
-                            <th>MARCADOR A</th>
-                            <th>MARCADOR B</th>
+                            <th>MARCADOR A</th>                            
                             <th>EQUIPO B</th>
+                            <th>MARCADOR B</th>
                             <th>DEPORTE</th>
                             <th>DESCRIPCIÓN</th>
                         </tr>
@@ -156,8 +156,8 @@ class PageEventos extends Component {
                                         <td>{evento.fecha}</td> 
                                         <td>{evento.equipo1}</td> 
                                         <td>{evento.marca1}</td>
-                                        <td>{evento.marca2}</td>
-                                        <td>{evento.equipo2}</td> 
+                                        <td>{evento.equipo2}</td>
+                                        <td>{evento.marca2}</td> 
                                         <td>{evento.deporte}</td> 
                                         <td>{evento.descrip}</td>           
                                         <td>
@@ -198,8 +198,6 @@ class PageEventos extends Component {
                     </select> <br />
                     <label htmlFor="eve_marca1">MARCADOR A</label>
                     <input className="form-control" type="text" name="eve_marca1" id="eve_marca1" onChange={this.handleChange} value={form ? form.eve_marca1 : ''}/> <br />
-                    <label htmlFor="eve_marca2">MARCADOR B</label>
-                    <input className="form-control" type="text" name="eve_marca2" id="eve_marca2" onChange={this.handleChange} value={form ? form.eve_marca2 : ''}/> <br />
                     <label htmlFor="equ_equipo2">EQUIPO B</label>
                     <select className="form-control" type="text" name="equ_equipo2" id="equ_equipo2" onChange={this.handleChange}> 
                         <option disabled selected>Seleccione un equipo</option>          
@@ -211,6 +209,8 @@ class PageEventos extends Component {
                             })
                         }
                     </select> <br />
+                    <label htmlFor="eve_marca2">MARCADOR B</label>
+                    <input className="form-control" type="text" name="eve_marca2" id="eve_marca2" onChange={this.handleChange} value={form ? form.eve_marca2 : ''}/> <br />
                     <label htmlFor="dep_id">DEPORTE</label>
                     <select className="form-control" type="text" name="dep_id" id="dep_id" onChange={this.handleChange}> 
                         <option disabled selected>Seleccione un deporte</option>

@@ -100,7 +100,7 @@ class PageDeportes extends Component{
           <br /><br /><br />
           <button className="btn btn-success" onClick={()=>{this.setState({form:null,tipoModal:'insertar'});this.modalInsertar()}} >Agregar Deportes</button>    
           <br /><br />
-          <table className="table ">
+          <table className="table " class="table table-striped">
             <thead>
               <tr>
                 {/*<th>ID</th>*/}
