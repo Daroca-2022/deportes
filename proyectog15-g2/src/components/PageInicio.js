@@ -3,8 +3,7 @@ import React, { Component } from 'react'
 import axios from "axios";//
 import "bootstrap/dist/css/bootstrap.min.css";//
 
-
-const urlEventos = 'http://localhost:5000/eventos/home'
+const urlEventos = 'https://backendg15-02-production.up.railway.app/eventos/home'
 
 class PageInicio extends Component{
    
