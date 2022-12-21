@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express=require('express')
 const mongoose=require('mongoose')
 const bodyParser=require('body-parser')
@@ -5,10 +6,12 @@ const cors=require('cors')
 const routes=require('./routes')
 
 const app=express()
+const conexion=process.env.MONGO_CONEXION
+const port=process.env.PORT
 
 mongoose.Promise=global.Promise
 mongoose.connect(
-    'mongodb://127.0.0.1/deportes',
+    conexion,
     {useNewUrlParser:true,}
 )
 
@@ -20,6 +23,6 @@ app.use(cors())
 
 app.use('/',routes())
 
-app.listen(5000,()=>{
-    console.log('server listen in: 5000')
+app.listen(port || 5000,()=>{
+    console.log('server listen in:' + port)
 })
