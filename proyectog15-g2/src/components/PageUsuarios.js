@@ -6,7 +6,7 @@ import { faEdit, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 import { Modal, ModalBody, ModalFooter, ModalHeader } from 'reactstrap';
 import { config } from '@fortawesome/fontawesome-svg-core';
 
-const url="http://localhost:5000/usuarios"
+const url="https://backendg15-02-production.up.railway.app/usuarios"
 
 class PageUsuarios extends Component{
     state={
