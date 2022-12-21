@@ -6,7 +6,7 @@ import { faEdit, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 import { Modal, ModalBody, ModalFooter, ModalHeader } from 'reactstrap';
 
 
-const url="http://localhost:5000/deportes"
+const url="https://backendg15-02-production.up.railway.app/deportes"
 
 class PageDeportes extends Component{
     state={
