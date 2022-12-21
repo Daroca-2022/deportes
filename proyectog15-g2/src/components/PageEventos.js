@@ -5,7 +5,7 @@ import {faEdit, faTrashAlt} from '@fortawesome/free-solid-svg-icons';
 import {Modal, ModalBody, ModalFooter, ModalHeader} from 'reactstrap';
 import axios from "axios";
 
-const url = 'http://localhost:5000/eventos';
+const url = 'https://backendg15-02-production.up.railway.app/eventos';
 
 class PageEventos extends Component {
     state = {
