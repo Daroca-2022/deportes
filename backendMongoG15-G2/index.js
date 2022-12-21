@@ -8,7 +8,7 @@ const app=express()
 
 mongoose.Promise=global.Promise
 mongoose.connect(
-    'mongodb://127.0.0.1/deportes',
+    'mongodb+srv://Felipe:1234G15@cluster0.2uojakj.mongodb.net/deportes',
     {useNewUrlParser:true,}
 )
 
